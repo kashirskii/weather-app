@@ -39,6 +39,7 @@ export const weatherSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fecthDataWeather.pending, (state) => {
       state.loading = true;
+      state.error = null;
     });
     builder.addCase(fecthDataWeather.fulfilled, (state, action) => {
       state.loading = false;
