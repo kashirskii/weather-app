@@ -3,7 +3,7 @@ import instance from "./instance";
 
 const getCurrentWeather = async ({ q, days, lang }: getCurrentWeatherRequest) => {
   return instance
-    .get<getCurrentWeatherResponse>("/current.json", {
+    .get<getCurrentWeatherResponse>("/forecast.json", {
       params: {
         q,
         lang,
