@@ -21,7 +21,7 @@ export const fecthDataWeather = createAsyncThunk<
 });
 
 export interface WeatherState {
-  data: getCurrentWeatherResponse | null | undefined;
+  data: getCurrentWeatherResponse | null;
   loading: boolean;
   error: null | string | undefined;
 }
