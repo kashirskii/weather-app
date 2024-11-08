@@ -1,14 +1,14 @@
-import HeadWidget from "./components/HeadWidget/HeadWidget";
 import SearchForm from "./components/SearchForm/SearchForm";
+import Widgets from "./components/Widgets/Widgets";
 
 const App = () => {
   return (
-    <main className="mt-48 ml-48">
-      <div className="w-[1024px]">
+    <div className="flex gap-5 mt-5">
+      <main className="flex flex-col gap-4 mt-24 ml-24">
         <SearchForm />
-        <HeadWidget/>
-      </div>
-    </main>
+        <Widgets />
+      </main>
+    </div>
   );
 };
 

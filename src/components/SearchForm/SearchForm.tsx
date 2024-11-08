@@ -1,19 +1,33 @@
 import { fecthDataWeather } from "../../features/weather/weatherSlice";
 import { debounce } from "../../helpers/debounce";
-import { useAppDispatch } from "../../hooks";
+import { useAppDispatch, useAppSelector } from "../../hooks";
 import { AppDispatch } from "../../store";
 
 const SearchForm = () => {
   const dispatch = useAppDispatch<AppDispatch>();
-  const debounceHandler = debounce((event: React.ChangeEvent<HTMLInputElement>) => dispatch(fecthDataWeather({q: `${event.target.value}`, days: 3, lang: 'ru'})), 400)
+  const error = useAppSelector((state) => state.weather.error);
+
+  const debounceHandler = debounce(
+    (event: React.ChangeEvent<HTMLInputElement>) =>
+      dispatch(
+        fecthDataWeather({ q: `${event.target.value}`, days: 3, lang: "en" })
+      ),
+    400
+  );
+
   return (
-    <form>
-      <input
-        className="w-1/4 border-[2px] rounded-xl mb-4 py-2 px-4 border-[#ababcb] focus:outline-none font-medium"
-        placeholder="Enter city name ..."
-        onChange={(event) => debounceHandler(event)}
-      />
-    </form>
+    <div className="p-[25px] bg-white rounded-xl w-[440px] flex items-center">
+      <form className="">
+        <input
+          className="border-[2px] rounded-xl py-2 px-4 border-[#8b919c] focus:outline-none font-medium"
+          placeholder="Enter city name ..."
+          onChange={(event) => debounceHandler(event)}
+        />
+      </form>
+      {error ? (
+        <div className="ml-5 font-medium text-[#f52233]">{error}</div>
+      ) : null}
+    </div>
   );
 };
 
