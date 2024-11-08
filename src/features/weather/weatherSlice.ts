@@ -47,11 +47,10 @@ export const weatherSlice = createSlice({
     });
     builder.addCase(fecthDataWeather.rejected, (state, action) => {
       state.loading = false;
-      state.data = null;
       if (action.payload?.status === 400) {
-        state.error = "Геопозиция не найдена";
+        state.error = "No location found";
       } else {
-        state.error = "Непредвиденная ошибка";
+        state.error = "Unexpected error";
       }
     });
   },
