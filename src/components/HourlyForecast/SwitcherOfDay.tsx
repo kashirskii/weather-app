@@ -16,6 +16,7 @@ const SwitcherOfDay = ({ days, indexOfDay, setIndexOfDay }: SwitcherOfDay) => {
       {days!.map((day, index) => {
         return (
           <li
+            key={day}
             onClick={() => setIndexOfDay(index)}
             className={
               indexOfDay === index

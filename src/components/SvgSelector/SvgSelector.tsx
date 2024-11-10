@@ -1,12 +1,12 @@
 import { memo } from "react";
 
 interface SvgSelectorProps {
-  svgKey: 'wind' | 'humidity' | 'down-arrow';
+  svgKey: "wind" | "humidity" | "down-arrow" | "sunset" | "sunrise";
 }
 
 const SvgSelector = memo(({ svgKey }: SvgSelectorProps) => {
   switch (svgKey) {
-    case 'wind':
+    case "wind":
       return (
         <svg
           viewBox="0 0 24 24"
@@ -42,7 +42,7 @@ const SvgSelector = memo(({ svgKey }: SvgSelectorProps) => {
           </g>
         </svg>
       );
-    case 'humidity':
+    case "humidity":
       return (
         <svg
           viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ const SvgSelector = memo(({ svgKey }: SvgSelectorProps) => {
           </g>
         </svg>
       );
-    case 'down-arrow':
+    case "down-arrow":
       return (
         <svg
           fill="#000000"
@@ -85,6 +85,47 @@ const SvgSelector = memo(({ svgKey }: SvgSelectorProps) => {
           ></g>
           <g id="SVGRepo_iconCarrier">
             <path d="M21.886 5.536A1.002 1.002 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13a.998.998 0 0 0 1.644 0l9-13a.998.998 0 0 0 .064-1.033zM12 17.243 4.908 7h14.184L12 17.243z"></path>
+          </g>
+        </svg>
+      );
+    case "sunset":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height={24}>
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M6 12L5 11M18 12L19 11M3 18H21M5 21H19M7 18C7 15.2386 9.23858 13 12 13C14.7614 13 17 15.2386 17 18M12 3V10M12 10L15 7M12 10L9 7"
+              stroke="#000000"
+              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+          </g>
+        </svg>
+      );
+    case "sunrise":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height={24}>
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            {" "}
+            <path
+              d="M12 10V3M12 3L9 6M12 3L15 6M6 12L5 11M18 12L19 11M3 18H21M5 21H19M7 18C7 15.2386 9.23858 13 12 13C14.7614 13 17 15.2386 17 18"
+              stroke="#000000"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
           </g>
         </svg>
       );

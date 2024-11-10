@@ -13,7 +13,7 @@ const MiniWidget = ({ icon, title, text, loading }: MiniWidget) => {
   }
 
   return (
-    <section className="bg-white w-full h-fit rounded-xl p-[25px] flex gap-4 items-start">
+    <section className="bg-white h-fit rounded-xl p-[25px] flex gap-4 items-start">
       <div className="pt-1">{icon}</div>
       <div>
         <h3 className="text-xl font-medium text-[#394454] mb-1 ">{title}</h3>

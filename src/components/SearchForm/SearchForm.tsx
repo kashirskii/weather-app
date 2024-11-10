@@ -16,7 +16,7 @@ const SearchForm = () => {
   );
 
   return (
-    <div className="p-[25px] bg-white rounded-xl w-[440px] flex items-center">
+    <div className="p-[25px] bg-white rounded-xl w-full flex items-center">
       <form className="">
         <input
           className="border-[2px] rounded-xl py-2 px-4 border-[#8b919c] focus:outline-none font-medium"
