@@ -7,16 +7,16 @@ const extractDayOfWeek = (date: string): string | null => {
   }
 
   const daysOfWeek = [
-    "Понедельник",
-    "Вторник",
-    "Среда",
-    "Четверг",
-    "Пятница",
-    "Суббота",
-    "Воскресенье",
+    "Sunday",
+    "Monday",
+    "Tuesday ",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
 
-  return daysOfWeek[day.getDay() - 1];
+  return daysOfWeek[day.getDay()];
 };
 
-export { extractDayOfWeek }
+export { extractDayOfWeek };
