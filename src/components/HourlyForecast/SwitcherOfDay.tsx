@@ -24,11 +24,13 @@ const SwitcherOfDay = ({ days, indexOfDay, setIndexOfDay }: SwitcherOfDay) => {
                 : "border-b-[3px] border-transparent"
             }
           >
-            {index === 0
-              ? "Today"
-              : index === 1
-              ? "Tomorrow"
-              : extractDayOfWeek(day)}
+            <button>
+              {index === 0
+                ? "Today"
+                : index === 1
+                ? "Tomorrow"
+                : extractDayOfWeek(day)}
+            </button>
           </li>
         );
       })}
